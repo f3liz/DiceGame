@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 * {
   margin: 0;
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
   height: 100vh;
   color: #333;
@@ -168,4 +168,128 @@ main {
 
 .hidden {
   display: none;
+}
+/* Computer (Desktops) */
+@media (min-width: 1200px) {
+  main {
+    width: 100rem; /* Retain the original size for desktops */
+    height: 60rem;
+  }
+
+  .name {
+    font-size: 4rem;
+  }
+
+  .score {
+    font-size: 8rem;
+  }
+
+  .current {
+    width: 65%;
+    padding: 2rem;
+  }
+
+  .btn {
+    font-size: 1.8rem;
+  }
+
+  .dice {
+    height: 10rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1199px) {
+  main {
+    width: 80rem; /* Reduce size for tablets */
+    height: 50rem;
+  }
+
+  .name {
+    font-size: 3.5rem; /* Adjust font sizes */
+  }
+
+  .score {
+    font-size: 6rem;
+  }
+
+  .current {
+    width: 75%; /* Adjust width */
+    padding: 1.5rem; /* Adjust padding */
+  }
+
+  .btn {
+    font-size: 1.6rem; /* Slightly smaller buttons */
+  }
+
+  .dice {
+    height: 8rem; /* Smaller dice */
+  }
+}
+
+/* iPhone (and similar mobile devices) */
+@media (max-width: 767px) {
+  body {
+    height: auto; /* Allow body to adjust height */
+  }
+
+  main {
+    width: 100%; /* Full width on mobile */
+    height: 100vh; /* Full height of the viewport */
+    padding: 0; /* No padding */
+    flex-direction: column; /* Stack player sections vertically */
+    justify-content: center; /* Center content vertically */
+  }
+
+  .player {
+    flex: 1; /* Each player takes full height equally */
+    padding: 2rem; /* Adjust padding for player sections */
+    display: flex; /* Ensure players still use flexbox */
+    flex-direction: column; /* Stack contents vertically */
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center content within player sections */
+    width: 100%; /* Ensure full width */
+  }
+
+  .name {
+    font-size: 2.5rem; /* Further reduce font size */
+  }
+
+  .score {
+    font-size: 4.5rem; /* Adjust score size for readability */
+  }
+
+  .current {
+    width: 90%; /* Wider current score display */
+    padding: 1rem; /* Adjust padding */
+  }
+
+  .current-label {
+    font-size: 1.4rem; /* Adjust label size for better visibility */
+  }
+
+  .current-score {
+    font-size: 2.5rem; /* Adjust score size */
+  }
+
+  .btn {
+    font-size: 1.4rem; /* Smaller buttons for mobile */
+    padding: 0.5rem 1.5rem; /* Adjust button padding */
+  }
+
+  .dice {
+    height: 6rem; /* Smaller dice for mobile */
+  }
+
+  .btn--new {
+    top: 2rem; /* Adjust button positioning */
+  }
+
+  .btn--roll {
+    top: 25rem; /* Adjust button positioning */
+  }
+
+  .btn--hold {
+    top: 32rem; /* Adjust button positioning */
+  }
 }
